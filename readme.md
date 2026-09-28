@@ -9,20 +9,25 @@ point for using network cameras as input for a sketch.
 
 ## Installation
 
-Requirements: an MJPEG stream URL and a proxy that adds CORS headers to
-the stream. The proxy is not included in this repository; you have to run
-one yourself.
-
-1. Set the camera stream URL in `videoSrc` at the top of `sketch.js`
-   (MJPEG cameras often serve streams at paths like `/?action=stream`).
-2. Set `proxyUrl` to your proxy. The sketch expects an endpoint of the
-   form `http://<host>:<port>/stream?url=`.
+Requirements: an MJPEG stream URL. Set it in `videoSrc` at the top of
+`sketch.js` (MJPEG cameras often serve streams at paths like
+`/?action=stream`).
 
 Libraries (in `libraries/`): p5.js 1.10.0, p5.sound 1.0.1 (included, not used).
 
+## Server
+
+Needs `stream-proxy` from
+[Servers_RaspberriPi](https://github.com/ZHdK-Critical-Coding/Servers_RaspberriPi)
+(HTTP, port 5000), running on a Raspberry Pi in the same network as your
+computer. Start it first with `bash run.sh` (or `python server.py`) in its
+folder. It fetches the camera stream and passes it on with CORS headers,
+so the sketch can read its pixels. Set `proxyUrl` in `sketch.js` to
+`http://<pi-ip>:5000/stream?url=`.
+
 ## How to Run
 
-Open the folder in Visual Studio Code and start Live Server (click
+Start the proxy first (see Server). Then open the folder in Visual Studio Code and start Live Server (click
 **Go Live** in the status bar).
 
 While the stream is loading, the stream URL is shown on a black canvas.
