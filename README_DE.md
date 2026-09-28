@@ -18,16 +18,19 @@ du musst selbst einen betreiben.
    (MJPEG-Kameras liefern Streams oft unter Pfaden wie `/?action=stream`).
 2. `proxyUrl` auf den eigenen Proxy setzen. Der Sketch erwartet einen
    Endpunkt der Form `http://<host>:<port>/stream?url=`.
-3. Den Ordner in Visual Studio Code öffnen und Live Server starten (in der
-   Statusleiste auf **Go Live** klicken).
+
+Bibliotheken (in `libraries/`): p5.js 1.10.0, p5.sound 1.0.1 (eingebunden,
+nicht verwendet).
+
+## Ausführen
+
+Den Ordner in Visual Studio Code öffnen und Live Server starten (in der
+Statusleiste auf **Go Live** klicken).
 
 Solange der Stream lädt, wird die Stream-URL auf schwarzem Grund angezeigt.
 Bei CORS-Problemen die Debugger-Konfiguration **Launch Chrome (no
 Security)** verwenden (Bereich Run and Debug). Sie öffnet Chrome mit
 deaktivierter Web-Security auf `http://127.0.0.1:5500`.
-
-Bibliotheken (in `libraries/`): p5.js 1.10.0, p5.sound 1.0.1 (eingebunden,
-nicht verwendet).
 
 ## Coding-Hilfe
 

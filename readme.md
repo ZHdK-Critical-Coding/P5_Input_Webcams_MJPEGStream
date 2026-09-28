@@ -17,15 +17,18 @@ one yourself.
    (MJPEG cameras often serve streams at paths like `/?action=stream`).
 2. Set `proxyUrl` to your proxy. The sketch expects an endpoint of the
    form `http://<host>:<port>/stream?url=`.
-3. Open the folder in Visual Studio Code and start Live Server (click
-   **Go Live** in the status bar).
+
+Libraries (in `libraries/`): p5.js 1.10.0, p5.sound 1.0.1 (included, not used).
+
+## How to Run
+
+Open the folder in Visual Studio Code and start Live Server (click
+**Go Live** in the status bar).
 
 While the stream is loading, the stream URL is shown on a black canvas.
 If you run into CORS problems, use the debugger configuration
 **Launch Chrome (no Security)** (Run and Debug panel), which opens Chrome
 with web security disabled on `http://127.0.0.1:5500`.
-
-Libraries (in `libraries/`): p5.js 1.10.0, p5.sound 1.0.1 (included, not used).
 
 ## Coding Help
 
